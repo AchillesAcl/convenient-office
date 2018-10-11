@@ -53,13 +53,13 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/example/table',
     name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    meta: { title: '首页', icon: 'example' },
     children: [
       {
         path: 'table',
         name: 'Table',
         component: () => import('@/views/table/complexTable'),
-        meta: { title: 'Table', icon: 'table' }
+        meta: { title: '加班月总结', icon: 'table' }
       },
       {
         path: 'tree',
