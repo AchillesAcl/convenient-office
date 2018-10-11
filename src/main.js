@@ -14,8 +14,8 @@ import App from './App'
 import router from './router'
 import store from './store'
 
-import '@/icons' // icon
-import '@/permission' // permission control
+import './icons' // icon
+import './permission' // permission control
 import './mock' // simulation data
 import * as filters from './filters' // global filters
 // Vue.use(ElementUI, { locale })
