@@ -2,7 +2,7 @@ import Mock from 'mockjs'
 import loginAPI from './login'
 import articleAPI from './article'
 // import remoteSearchAPI from './remoteSearch'
-// import transactionAPI from './transaction'
+import transactionAPI from './transaction'
 
 // Mock.setup({
 //   timeout: '350-600'
@@ -24,6 +24,6 @@ Mock.mock(/\/article\/update/, 'post', articleAPI.updateArticle)
 // Mock.mock(/\/search\/user/, 'get', remoteSearchAPI.searchUser)
 
 // 账单相关
-// Mock.mock(/\/transaction\/list/, 'get', transactionAPI.getList)
+Mock.mock(/\/transaction\/list/, 'get', transactionAPI.getList)
 
 export default Mock
