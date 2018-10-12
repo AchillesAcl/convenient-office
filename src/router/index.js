@@ -67,7 +67,7 @@ export const constantRouterMap = [
         path: 'index',
         component: () => import('@/views/i18n-demo/index'),
         name: 'I18n',
-        meta: { title: 'i18n', icon: 'table' }
+        meta: { title: '功能页', icon: 'table' }
       }
     ]
   },

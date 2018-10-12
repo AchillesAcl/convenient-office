@@ -1,19 +1,35 @@
 <template>
   <div>
+    <el-row :gutter="1">
+      <el-col ><div>
     <el-card class="box-card" style="margin-top:40px;">
       <div slot="header" class="clearfix">
         <svg-icon icon-class="international" />
         <span style="margin-left:10px;">{{ $t('i18nView.title') }}</span>
       </div>
       <div>
-        <el-radio-group v-model="lang" size="small">
+        <!-- <el-radio-group v-model="lang" size="small">
           <el-radio label="zh" border>简体中文</el-radio>
           <el-radio label="en" border>English</el-radio>
-        </el-radio-group>
-        <el-tag style="margin-top:15px;display:block;" type="info">{{ $t('i18nView.note') }}</el-tag>
+        </el-radio-group> -->
+        <!-- <el-tag style="margin-top:15px;display:block;" type="info">{{ $t('i18nView.note') }}</el-tag> -->
       </div>
     </el-card>
-
+    </div>
+    </el-col>
+    <el-col >
+      <div>
+    <el-card class="box-card" style="margin-top:40px;">
+      <div slot="header" class="clearfix">
+        <svg-icon icon-class="international" />
+        <span style="margin-left:10px;">{{ $t('i18nView.title') }}</span>
+      </div>
+      <div>
+      </div>
+    </el-card>
+    </div>
+    </el-col>
+</el-row>
     <el-row :gutter="20" style="margin:100px 15px 50px;">
       <el-col :span="12" :xs="24">
         <div class="block">
