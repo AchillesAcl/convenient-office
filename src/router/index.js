@@ -82,7 +82,7 @@ export const constantRouterMap = [
         path: 'table',
         name: 'Table',
         component: () => import('@/views/table/complexTable'),
-        meta: { title: '加班月总结', icon: 'table' }
+        meta: { title: '请假', icon: 'table' }
       },
       {
         path: 'tree',

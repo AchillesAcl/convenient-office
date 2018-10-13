@@ -10,7 +10,9 @@
                   <svg-icon icon-class="international" />
                   <span style="margin-left:10px;">工作相关</span>
                 </div>
-                工作日志
+                <div>
+             <span><a href="#">1</a></span><span><a href="#">warnin</a></span>
+                </div>
               </el-card>
             </el-col>
             <el-col :span="8">
@@ -18,8 +20,7 @@
                 <div slot="header" class="clearfix">
                   <svg-icon icon-class="international" />
                   <span style="margin-left:10px;">{{ $t('i18nView.title') }}</span>
-                </div>
-                鼠标悬浮时显示
+                </div>鼠标悬浮时显示
               </el-card>
             </el-col>
             <el-col :span="8">
@@ -27,8 +28,7 @@
                 <div slot="header" class="clearfix">
                   <svg-icon icon-class="international" />
                   <span style="margin-left:10px;">{{ $t('i18nView.title') }}</span>
-                </div>
-                从不显示
+                </div>从不显示
               </el-card>
             </el-col>
           </el-row>
@@ -42,8 +42,7 @@
                 <div slot="header" class="clearfix">
                   <svg-icon icon-class="international" />
                   <span style="margin-left:10px;">{{ $t('i18nView.title') }}</span>
-                </div>
-                总是显示
+                </div>总是显示
               </el-card>
             </el-col>
             <el-col :span="8">
@@ -51,8 +50,7 @@
                 <div slot="header" class="clearfix">
                   <svg-icon icon-class="international" />
                   <span style="margin-left:10px;">{{ $t('i18nView.title') }}</span>
-                </div>
-                鼠标悬浮时显示
+                </div>鼠标悬浮时显示
               </el-card>
             </el-col>
             <el-col :span="8">
@@ -60,8 +58,7 @@
                 <div slot="header" class="clearfix">
                   <svg-icon icon-class="international" />
                   <span style="margin-left:10px;">{{ $t('i18nView.title') }}</span>
-                </div>
-                从不显示
+                </div>从不显示
               </el-card>
             </el-col>
           </el-row>
@@ -88,7 +85,7 @@
         </div>
       </el-col>
       <el-col :span="12" :xs="24">
-        <el-table :data="tableData" fit highlight-current-row border style="width: 100%">
+        <el-table :data="tableData" fit highlight-current-row border="" style="width: 100%">
           <el-table-column :label="$t('i18nView.tableName')" prop="name" width="100" align="center" />
           <el-table-column :label="$t('i18nView.tableDate')" prop="date" width="120" align="center" />
           <el-table-column :label="$t('i18nView.tableAddress')" prop="address" />
@@ -99,95 +96,95 @@
 </template>
 
 <script>
-import local from './local'
-const viewName = 'i18nView'
+import local from "./local";
+const viewName = "i18nView";
 
 export default {
-  name: 'I18n',
+  name: "I18n",
   data() {
     return {
-      date: '',
+      date: "",
       tableData: [
         {
-          date: '2016-05-03',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
+          date: "2016-05-03",
+          name: "Tom",
+          address: "No. 189, Grove St, Los Angeles"
         },
         {
-          date: '2016-05-02',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
+          date: "2016-05-02",
+          name: "Tom",
+          address: "No. 189, Grove St, Los Angeles"
         },
         {
-          date: '2016-05-04',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
+          date: "2016-05-04",
+          name: "Tom",
+          address: "No. 189, Grove St, Los Angeles"
         },
         {
-          date: '2016-05-01',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
+          date: "2016-05-01",
+          name: "Tom",
+          address: "No. 189, Grove St, Los Angeles"
         }
       ],
       options: [],
-      value: ''
-    }
+      value: ""
+    };
   },
   computed: {
     lang: {
       get() {
-        return this.$store.state.app.language
+        return this.$store.state.app.language;
       },
       set(lang) {
-        this.$i18n.locale = lang
-        this.$store.dispatch('setLanguage', lang)
+        this.$i18n.locale = lang;
+        this.$store.dispatch("setLanguage", lang);
       }
     }
   },
   watch: {
     lang() {
-      this.setOptions()
+      this.setOptions();
     }
   },
   created() {
-    if (!this.$i18n.getLocaleMessage('en')[viewName]) {
-      this.$i18n.mergeLocaleMessage('en', local.en)
-      this.$i18n.mergeLocaleMessage('zh', local.zh)
+    if (!this.$i18n.getLocaleMessage("en")[viewName]) {
+      this.$i18n.mergeLocaleMessage("en", local.en);
+      this.$i18n.mergeLocaleMessage("zh", local.zh);
     }
-    this.setOptions() // set default select options
+    this.setOptions(); // set default select options
   },
   methods: {
     setOptions() {
       this.options = [
         {
-          value: '1',
-          label: this.$t('i18nView.one')
+          value: "1",
+          label: this.$t("i18nView.one")
         },
         {
-          value: '2',
-          label: this.$t('i18nView.two')
+          value: "2",
+          label: this.$t("i18nView.two")
         },
         {
-          value: '3',
-          label: this.$t('i18nView.three')
+          value: "3",
+          label: this.$t("i18nView.three")
         }
-      ]
+      ];
     }
   }
-}
+};
 </script>
 
 <style scoped>
 .box-card {
-    width: 1600px;
-    max-width: 100%;
-    margin: 20px auto;
+  width: 1600px;
+  max-width: 100%;
+  margin: 20px auto;
 }
 .item-btn {
-    margin-bottom: 15px;
-    margin-left: 0px;
+  margin-bottom: 15px;
+  margin-left: 0px;
 }
 .block {
-    padding: 25px;
+  padding: 25px;
 }
 </style>

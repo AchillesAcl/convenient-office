@@ -73,7 +73,7 @@ module.exports = {
     'no-class-assign': 2,
     'no-cond-assign': 2,
     'no-const-assign': 2,
-    'no-control-regex': 2,
+    // 'no-control-regex': 2,
     'no-delete-var': 2,
     'no-dupe-args': 2,
     'no-dupe-class-members': 2,
@@ -159,15 +159,15 @@ module.exports = {
       }
     }],
     'padded-blocks': [2, 'never'],
-    'quotes': [2, 'single', {
-      'avoidEscape': true,
-      'allowTemplateLiterals': true
-    }],
-    'semi': [2, 'never'],
-    'semi-spacing': [2, {
-      'before': false,
-      'after': true
-    }],
+    // 'quotes': [2, 'single', {
+    //   'avoidEscape': true,
+    //   'allowTemplateLiterals': true
+    // }],
+    // 'semi': [2, 'never'],
+    // 'semi-spacing': [2, {
+    //   'before': false,
+    //   'after': true
+    // }],
     'space-before-blocks': [2, 'always'],
     'space-before-function-paren': [2, 'never'],
     'space-in-parens': [2, 'never'],

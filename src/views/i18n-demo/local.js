@@ -1,4 +1,3 @@
-
 export default {
   zh: {
     i18nView: {
